@@ -1,0 +1,22 @@
+figure out if a board is valid we need to check:
+- the current value is not repeated on the same row
+- the current value is not repeated on the same column
+- the current value is not repeated in the same quadrant
+
+how to do we check which quadrant
+- loop through the column
+- everytime the column hits a multiple of three increase by 1
+
+how to we check there is not repeatation on the same row:
+- loop through the rows
+- loop though the values in row excluding onces that are blank
+- check that there isn't another instance of the value on the row
+- if there is then we need to get the quadrant the value is in
+
+how do we check there is no repeatation on the same column
+- take the column using array_column
+- loop through the values excluding empty ones
+
+how do check there is no repeatation on the same quadrant
+- count what row the number is on and increment by the quadrant by three everytime a multiple of 3 is counted
+- once on the correct row then get the key in the individual array and count up by one everytime a multiple of three is counted
